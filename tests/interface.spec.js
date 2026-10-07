@@ -1,0 +1,54 @@
+import { test, expect } from '@playwright/test';
+
+test('spacing, language, images and navigation work across screen sizes', async ({ page }, testInfo) => {
+  const errors = [];
+  page.on('pageerror', error => errors.push(error.message));
+  await page.goto('/');
+  await expect(page.locator('html')).toHaveAttribute('lang', 'vi');
+  await expect(page.locator('#hero .section-label')).toHaveCSS('color', 'rgb(255, 255, 255)');
+  await expect(page.locator('#contact form input').first()).toHaveCSS('padding-top', '12px');
+  await expect(page.locator('#contact form input').first()).toHaveCSS('padding-left', '16px');
+  await expect(page.locator('#gift-box h2')).toHaveCSS('margin-bottom', '16px');
+  await expect(page.locator('#gift-box')).toContainText('Thiết Kế Bền Vững');
+  await page.locator('#navbar button').filter({ hasText: 'VIE' }).filter({ visible: true }).click();
+  await expect(page.locator('html')).toHaveAttribute('lang', 'en');
+  await expect(page.locator('#gift-box')).toContainText('Sustainable Design');
+  if (testInfo.project.name === 'mobile') {
+    await page.locator('#nav-burger').click();
+    await expect(page.locator('#nav-burger')).toHaveAttribute('aria-expanded', 'true');
+    await page.locator('#mobile-navigation a[href="#contact"]').first().click();
+    await expect(page.locator('#nav-burger')).toHaveAttribute('aria-expanded', 'false');
+    await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
+  }
+  await page.locator('#sustainability').scrollIntoViewIfNeeded();
+  await page.getByRole('link', { name: 'Open Nếp Tre contact section' }).click();
+  await expect(page).toHaveURL(/#contact$/);
+  for (const image of await page.locator('img').all()) {
+    await image.scrollIntoViewIfNeeded();
+    await expect.poll(() => image.evaluate(img => img.complete && img.naturalWidth > 0)).toBe(true);
+  }
+  const overflow = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth);
+  expect(overflow).toBe(false);
+  expect(errors).toEqual([]);
+});
+
+test('demo form validates quantity and preserves inputs on return without sending an order', async ({ page }) => {
+  const submissions = [];
+  page.on('request', request => {
+    if (request.method() === 'POST') submissions.push(request.url());
+  });
+  await page.goto('/#contact');
+  await page.getByLabel('Họ và Tên', { exact: true }).fill('Khách thử nghiệm');
+  await page.getByLabel('Số Điện Thoại', { exact: true }).fill('0972000300');
+  const quantity = page.getByLabel('Số Lượng Hộp', { exact: true });
+  await quantity.fill('0');
+  await page.getByRole('button', { name: 'Thử Gửi Yêu Cầu Minh Họa' }).click();
+  await expect(page.getByRole('status')).toHaveCount(0);
+  await quantity.fill('2');
+  await page.getByRole('button', { name: 'Thử Gửi Yêu Cầu Minh Họa' }).click();
+  await expect(page.getByRole('status')).toContainText('Yêu cầu chưa được gửi hoặc lưu');
+  await page.getByRole('button', { name: 'Quay lại biểu mẫu' }).click();
+  await expect(page.getByLabel('Họ và Tên', { exact: true })).toHaveValue('Khách thử nghiệm');
+  await expect(quantity).toHaveValue('2');
+  expect(submissions).toEqual([]);
+});
