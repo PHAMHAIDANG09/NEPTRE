@@ -25,7 +25,7 @@ export default function Footer() {
               <div>
                 <h3 className="font-display text-lg font-bold text-white">Nép Tre</h3>
                 <p className="text-xs text-brand-400 tracking-wider uppercase font-semibold">
-                  Hanoi Gift Box
+                  {getText(docxContent.hero.title)}
                 </p>
               </div>
             </div>
@@ -87,7 +87,7 @@ export default function Footer() {
         {/* Bottom */}
         <div className="mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-white/40">
-            © {currentYear} Nép Tre — Hanoi Gift Box. All rights reserved.
+            © {currentYear} Nép Tre — {getText(docxContent.hero.title)}. {lang === 'vi' ? 'Bảo lưu mọi quyền.' : 'All rights reserved.'}
           </p>
           <p className="text-xs text-white/30 italic font-accent">
             {lang === 'vi' ? 'Trọn vị Kinh Kỳ — Sứ mệnh gìn giữ văn hóa Việt' : 'A Taste of Hanoi’s Timeless Charm'}

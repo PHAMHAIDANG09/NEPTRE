@@ -2,6 +2,34 @@ import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import { useLanguage } from '../context/language';
 
+function ProductStory({ product, lang }) {
+  const sections = [
+    {
+      title: lang === 'vi' ? 'Nguồn gốc và câu chuyện' : 'Origins and Story',
+      text: product.description[lang],
+    },
+    {
+      title: lang === 'vi' ? 'Ý nghĩa văn hóa' : 'Cultural Significance',
+      text: product.culturalSignificance[lang],
+    },
+  ];
+
+  return (
+    <div className="space-y-6" lang={lang}>
+      {sections.map(section => (
+        <div key={section.title}>
+          <h4 className="font-semibold mb-2">{section.title}</h4>
+          <div className="space-y-3 leading-relaxed">
+            {section.text.split('\n\n').map(paragraph => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function ProductCard({ product, index, lang }) {
   const cardRef = useRef(null);
   const isInView = useInView(cardRef, { once: true, margin: '-50px' });
@@ -22,12 +50,12 @@ function ProductCard({ product, index, lang }) {
       className="group"
     >
       <div
-        className={`grid lg:grid-cols-12 gap-8 lg:gap-12 items-center ${
+        className={`grid lg:grid-cols-12 gap-8 lg:gap-12 items-start ${
           isEven ? '' : 'lg:direction-rtl'
         }`}
       >
         {/* Images Side - Displaying BOTH 2 images for the product */}
-        <div className={`lg:col-span-6 relative ${isEven ? '' : 'lg:order-2'}`}>
+        <div className={`lg:col-span-5 relative lg:sticky lg:top-28 ${isEven ? '' : 'lg:order-2'}`}>
           <div className="space-y-4">
             {/* Main Featured Display */}
             <div className="relative rounded-2xl overflow-hidden shadow-xl border border-brand-100/60 bg-white group-hover:shadow-2xl transition-all duration-500">
@@ -48,7 +76,7 @@ function ProductCard({ product, index, lang }) {
               {/* Quantity tag */}
               <div className="absolute top-4 left-4 px-3.5 py-1.5 bg-white/90 backdrop-blur-md rounded-full shadow-md z-10">
                 <span className="text-xs font-bold text-brand-800 tracking-wider">
-                  {product.quantity}
+                  {product.quantity[lang] || product.quantity}
                 </span>
               </div>
 
@@ -100,16 +128,7 @@ function ProductCard({ product, index, lang }) {
         </div>
 
         {/* Content Side */}
-        <div className={`lg:col-span-6 ${isEven ? '' : 'lg:order-1'} lg:direction-ltr`}>
-          <div className="inline-block px-3 py-1 bg-brand-50 border border-brand-200 rounded-full mb-3">
-            <span
-              className="text-xs font-bold tracking-wider uppercase"
-              style={{ color: product.accent }}
-            >
-              {lang === 'vi' ? product.name.en : product.name.vi}
-            </span>
-          </div>
-
+        <div className={`lg:col-span-7 min-w-0 ${isEven ? '' : 'lg:order-1'} lg:direction-ltr`}>
           <h3 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-brand-900 mt-1 mb-2">
             {product.name[lang]}
           </h3>
@@ -121,21 +140,12 @@ function ProductCard({ product, index, lang }) {
           <div className="w-16 h-[2px] bg-brand-400 mb-6" />
 
           {/* Primary Text (Exact docx content for active language) */}
-          <div className="bg-white/90 backdrop-blur-sm p-6 rounded-2xl border border-brand-100 shadow-sm mb-4">
-            <p className="text-brand-900 leading-relaxed text-base font-normal">
-              {product.description[lang]}
-            </p>
+          <div className="bg-white/90 backdrop-blur-sm p-4 sm:p-6 rounded-2xl border border-brand-100 shadow-sm mb-4">
+            <div className="text-brand-900 text-base font-normal">
+              <ProductStory product={product} lang={lang} />
+            </div>
           </div>
 
-          {/* Secondary Language Box for bilingual reference */}
-          <div className="p-4 bg-brand-50/70 rounded-xl border border-dashed border-brand-200 text-xs text-brand-800/80">
-            <span className="font-bold text-brand-900 uppercase tracking-wider block mb-1">
-              {lang === 'vi' ? 'English Translation' : 'Bản Gốc Tiếng Việt'}
-            </span>
-            <p className="italic leading-relaxed">
-              {lang === 'vi' ? product.description.en : product.description.vi}
-            </p>
-          </div>
         </div>
       </div>
     </motion.div>

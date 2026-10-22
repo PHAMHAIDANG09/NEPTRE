@@ -97,7 +97,7 @@ export default function BrandStory() {
 
               <p className="text-xs text-brand-600 font-medium tracking-wider uppercase">
                 {lang === 'vi'
-                  ? 'Hanoi Gift Box – Tinh hoa hội tụ'
+                  ? 'Bộ Quà Hà Nội – Tinh hoa hội tụ'
                   : 'Hanoi Gift Box – Full Collection'}
               </p>
             </motion.div>
@@ -151,22 +151,6 @@ export default function BrandStory() {
 
               <p className="text-brand-800 leading-relaxed text-base">
                 {getText(docxContent.hero.story)}
-              </p>
-            </div>
-
-            {/* Bilingual reference box */}
-            <div className="p-4 bg-brand-50/70 rounded-xl border border-dashed border-brand-200 text-xs text-brand-800/80">
-
-              <span className="font-bold uppercase tracking-wider block mb-1">
-                {lang === 'vi'
-                  ? 'Song ngữ Tiếng Anh'
-                  : 'Original Vietnamese Text:'}
-              </span>
-
-              <p className="italic">
-                {lang === 'vi'
-                  ? docxContent.hero.subtitle.en
-                  : docxContent.hero.subtitle.vi}
               </p>
             </div>
 

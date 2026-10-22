@@ -4,8 +4,8 @@ import { docxContent } from '../data/products';
 
 
 export function LanguageProvider({ children }) {
-  // Default to Vietnamese ('vi'), with full bilingual toggle capability
-  const [lang, setLang] = useState('vi');
+  // Show English initially; the switch selects the other language.
+  const [lang, setLang] = useState('en');
 
   useEffect(() => {
     document.documentElement.lang = lang;

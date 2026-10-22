@@ -1,7 +1,7 @@
 export const docxContent = {
   hero: {
     title: {
-      vi: "Bộ Quà Hà Nội — Hanoi Gift Box",
+      vi: "Bộ Quà Hà Nội",
       en: "Hanoi Gift Box",
     },
     subtitle: {
@@ -29,21 +29,25 @@ export const docxContent = {
     {
       id: 'green-rice-cake',
       name: {
-        vi: 'Bánh Cốm',
-        en: 'Green Rice Cake',
+        vi: 'Bánh Cốm Hà Nội',
+        en: 'Hanoi Green Rice Cake',
       },
       quantity: '250g',
       tagline: {
-        vi: 'Lời Cầu Chúc Giao Hòa',
-        en: 'A Blessing of Harmony',
+        vi: 'Hương vị xanh của truyền thống và ký ức',
+        en: 'The Green Flavor of Tradition and Memories',
       },
       fullTitle: {
-        vi: 'Bánh Cốm (250g) – Lời Cầu Chúc Giao Hòa',
-        en: 'Green Rice Cake (250g) – A Blessing of Harmony',
+        vi: 'BÁNH CỐM HÀ NỘI - Hương vị xanh của truyền thống và ký ức',
+        en: 'HANOI GREEN RICE CAKE – The Green Flavor of Tradition and Memories',
       },
       description: {
-        vi: 'Từng chiếc bánh cốm xanh ngát tựa ngọc bích là mảnh ghép không thể thiếu của mùa thu Hà Nội. Gắn liền với con phố Hàng Than sầm uất, bánh cốm mang lớp vỏ nếp dẻo thơm ôm lấy nhân đậu xanh xào đường dịu ngọt. Đây không chỉ là món ăn, mà là biểu tượng của tình yêu thủy chung, của những nếp nhà êm ấm và nét hào hoa truyền đời của người Hà Nội.',
-        en: 'Each jade-green green rice cake captures the essence of Hanoi’s autumn. Closely associated with the bustling Hàng Than Street, this beloved delicacy features a soft, fragrant glutinous rice shell wrapped around a gently sweet mung bean filling. More than a traditional treat, it symbolizes enduring love, the warmth of a harmonious family, and the refined elegance passed down through generations of Hanoians.',
+        vi: 'Bánh cốm là một trong những thức quà truyền thống gắn liền với văn hóa ẩm thực Hà Nội. Nguyên liệu chính là cốm, được làm từ những hạt lúa nếp non qua quá trình chế biến công phu, tạo nên màu xanh tự nhiên và hương thơm dịu nhẹ đặc trưng. Khi kết hợp với nhân đậu xanh ngọt bùi, cốm trở thành lớp vỏ mềm dẻo bao bọc phần nhân thơm ngon, tạo nên sự hài hòa giữa màu sắc, hương thơm và vị giác.\n\nNhắc đến bánh cốm, nhiều người thường nhớ đến phố Hàng Than, một địa chỉ lâu đời nổi tiếng với nghề làm bánh cốm của Hà Nội. Qua thời gian, bánh cốm không chỉ được yêu thích như một món quà ẩm thực mà còn trở thành hình ảnh quen thuộc trong những dịp lễ, cưới hỏi và các hoạt động trao tặng quà truyền thống.',
+        en: 'Green rice cake is one of Hanoi’s traditional delicacies, closely associated with the city’s culinary culture. Its main ingredient is young green sticky rice, carefully processed to create its natural green color and distinctive, delicate fragrance. Combined with a sweet, nutty mung bean filling, the green rice forms a soft, chewy outer layer that surrounds the flavorful filling, creating a harmonious balance of color, aroma, and taste.\n\nWhen people mention bánh cốm, many immediately think of Hang Than Street, a long-established destination famous for Hanoi’s green rice cake-making tradition. Over time, bánh cốm has become more than just a beloved culinary gift; it has also become a familiar part of celebrations, weddings, and traditional gift-giving occasions.',
+      },
+      culturalSignificance: {
+        vi: 'Màu xanh của bánh cốm gợi liên tưởng đến những cánh đồng lúa, sự sinh sôi và vẻ đẹp mộc mạc của làng quê Việt Nam. Hương vị dịu dàng, không quá cầu kỳ của bánh thể hiện nét tinh tế trong cách người Hà Nội lựa chọn và thưởng thức những món quà truyền thống.\n\nTrong văn hóa quà tặng, bánh cốm còn gắn với những dịp trọng đại, đặc biệt là lễ cưới hỏi, khi món bánh được sử dụng như một phần của lễ vật và lời chúc tốt đẹp dành cho đôi lứa. Vì vậy, bánh cốm không chỉ mang giá trị ẩm thực mà còn gợi nhắc đến sự gắn kết, niềm vui và những khởi đầu tốt đẹp.',
+        en: 'The green color of bánh cốm evokes images of rice fields, growth, and the rustic beauty of Vietnam’s countryside. Its gentle, uncomplicated flavor reflects the refined taste of Hanoians in choosing and enjoying traditional delicacies.\n\nIn Vietnamese gift-giving culture, bánh cốm is also associated with important occasions, especially weddings, when it is included in ceremonial gifts as a symbol of good wishes for couples. Therefore, bánh cốm represents not only culinary value but also togetherness, happiness, and promising new beginnings.',
       },
       image: '/images/green-rice-cake.webp',
       images: ['/images/green-rice-cake.webp', '/images/green-rice-cake0.webp'],
@@ -53,20 +57,24 @@ export const docxContent = {
       id: 'preserved-fruit',
       name: {
         vi: 'Ô Mai Sấu',
-        en: 'Preserved Fruit (Ô Mai Sấu)',
+        en: 'Dried Dracontomelon Preserves',
       },
       quantity: '200g',
       tagline: {
-        vi: 'Ký Ức Tuổi Thơ Chín Mọng',
-        en: 'A Sweet Taste of Childhood',
+        vi: 'Hương vị phố phường và nét duyên Hà Nội',
+        en: 'The Flavor of Hanoi’s Streets and Its Distinctive Charm',
       },
       fullTitle: {
-        vi: 'Ô Mai Sấu (200g) – Ký Ức Tuổi Thơ Chín Mọng',
-        en: 'Preserved fruit (200g) – A Sweet Taste of Childhood',
+        vi: 'Ô MAI SẤU - Hương vị phố phường và nét duyên Hà Nội',
+        en: 'DRIED DRACONTOMELON PRESERVES – The Flavor of Hanoi’s Streets and Its Distinctive Charm',
       },
       description: {
-        vi: 'Nhắc tới Hà Nội là nhớ tới những hàng sấu rợp bóng mát. Dưới bàn tay tài hoa của nghệ nhân, quả sấu được chế biến thành thức ô mai dẻo dai, chua thanh, ngọt nhẹ, quyện chút cay nồng của gừng tươi. Nếm một viên ô mai, du khách như đang rảo bước trên phố Hàng Đường, nếm lại dư vị trong trẻo của thuở học trò và những chiều thu se lạnh.',
-        en: 'To think of Hanoi is to picture its rows of crocodile trees casting cool, leafy shade across the streets. In the hands of skilled artisans, the fruit is transformed into a chewy preserve with a delicate sourness, subtle sweetness, and a warm hint of fresh ginger. With each bite, visitors are transported to Hàng Đường Street, rediscovering the carefree flavors of school days and the gentle chill of Hanoi’s autumn afternoons.',
+        vi: 'Sấu là loại quả quen thuộc trong đời sống của người Hà Nội, đặc biệt vào mùa hè, khi những hàng cây sấu xanh mát xuất hiện trên nhiều tuyến phố. Từ lâu, quả sấu đã trở thành nguyên liệu trong nhiều món ăn và thức uống dân dã, từ nước sấu giải khát đến các món canh chua đặc trưng của bữa cơm gia đình.\n\nBên cạnh cách sử dụng quả sấu tươi, người Việt còn phát triển nhiều phương pháp chế biến và bảo quản để lưu giữ hương vị của loại quả này. Ô mai sấu là một trong những thức quà được tạo nên từ sự kết hợp của vị chua tự nhiên với các gia vị như đường, muối và những nguyên liệu phù hợp theo từng công thức chế biến. Sự hòa quyện giữa các vị chua, ngọt và mặn tạo nên hương vị đậm đà, dễ nhận biết.\n\nÔ mai cũng gắn liền với văn hóa quà vặt và thói quen thưởng thức những món ăn nhỏ của người Hà Nội. Các cửa hàng ô mai trên phố cổ đã trở thành một phần quen thuộc trong trải nghiệm khám phá ẩm thực của người dân và du khách.',
+        en: 'Dracontomelon, known locally as sấu, is a familiar fruit in the daily lives of Hanoians, especially in summer, when leafy dracontomelon trees line many city streets. For generations, this fruit has been used in a variety of simple, everyday foods and drinks, from refreshing dracontomelon juice to the distinctive sour soups commonly served in family meals.\n\nIn addition to consuming fresh dracontomelon, Vietnamese people have developed various processing and preservation methods to retain its distinctive flavor. Ô mai sấu is a traditional preserved fruit delicacy made by combining the fruit’s natural sourness with seasonings such as sugar, salt, and other ingredients, depending on the recipe. The combination of sour, sweet, and salty flavors creates a rich and recognizable taste.\n\nPreserved fruit is also closely associated with Hanoi’s street-snack culture and the local habit of enjoying small treats. Traditional preserved-fruit shops in the Old Quarter have become a familiar part of the culinary exploration experience for both residents and visitors.',
+      },
+      culturalSignificance: {
+        vi: 'Hình ảnh những hàng cây sấu trên phố gợi nhớ đến vẻ đẹp bình dị của Hà Nội, nơi thiên nhiên hiện diện trong nhịp sống đô thị. Mùa sấu đến cũng gắn với những ký ức thân thuộc về thời tiết, đường phố và những món ăn theo mùa.\n\nÔ mai sấu thể hiện khả năng sáng tạo của người Việt trong việc tận dụng sản vật địa phương và biến nguyên liệu tự nhiên thành thức quà có thể lưu giữ, chia sẻ. Hương vị chua ngọt đan xen cũng gợi lên sự phong phú của ẩm thực Hà Nội, nơi những món ăn giản dị vẫn có thể để lại dấu ấn sâu sắc.\n\nTrong đời sống thường ngày, ô mai thường được mua làm quà cho bạn bè, người thân hoặc mang theo trong những chuyến đi. Một gói ô mai nhỏ vì thế có thể trở thành cách chia sẻ hương vị quê hương và những kỷ niệm gắn liền với một vùng đất.',
+        en: 'The sight of dracontomelon trees lining the streets evokes Hanoi’s simple, understated beauty, where nature remains an integral part of urban life. The arrival of the dracontomelon season is also associated with familiar memories of the weather, city streets, and seasonal foods.\n\nPreserved fruit reflects Vietnamese creativity in making use of local produce and transforming natural ingredients into delicacies that can be preserved and shared. Its interplay of sweet and sour flavors also highlights the diversity of Hanoi’s cuisine, where even simple foods can leave a lasting impression.\n\nIn everyday life, ô mai is often purchased as a gift for friends and family or carried along on trips. A small package of preserved fruit can therefore become a meaningful way to share the flavors of home and the memories associated with a particular place.',
       },
       image: '/images/preserved-fruit.webp',
       images: ['/images/preserved-fruit.webp', '/images/preserved-fruit0.webp'],
@@ -76,20 +84,24 @@ export const docxContent = {
       id: 'bavi-milk-cakes',
       name: {
         vi: 'Bánh Sữa Ba Vì',
-        en: 'Ba Vì Milk Cakes',
+        en: 'Ba Vi Milk Cakes',
       },
-      quantity: '10 chiếc / 10 pieces',
+      quantity: { vi: '10 chiếc', en: '10 pieces' },
       tagline: {
-        vi: 'Âm Hưởng Yên Bình Ngoại Ô',
-        en: 'The Peaceful Spirit of the Countryside',
+        vi: 'Hương vị từ thiên nhiên và sản vật địa phương',
+        en: 'Flavors Inspired by Nature and Local Produce',
       },
       fullTitle: {
-        vi: 'Bánh Sữa Ba Vì (10 chiếc) – Âm Hưởng Yên Bình Ngoại Ô',
-        en: 'Ba Vì Milk Cakes (10 pieces) – The Peaceful Spirit of the Countryside',
+        vi: 'BÁNH SỮA BA VÌ - Hương vị từ thiên nhiên và sản vật địa phương',
+        en: 'BA VI MILK CAKES – Flavors Inspired by Nature and Local Produce',
       },
       description: {
-        vi: 'Bên cạnh nét đài các phố cổ, bộ quà mang đến sự mộc mạc từ vùng ngoại ô xanh thẳm. Những chiếc bánh sữa mềm mịn, béo ngậy tan ngay nơi đầu lưỡi là thức quà tuổi thơ của biết bao thế hệ. Bánh sữa Ba Vì đem lại cảm giác thanh bình, chân phương, là điểm nhấn ngọt ngào hoàn thiện bức tranh ẩm thực đa sắc.',
-        en: 'Alongside the elegance of Hanoi’s Old Quarter, this gift box brings the rustic charm of its lush green outskirts. Soft, creamy milk cakes melt delicately on the tongue, evoking a beloved childhood treat shared by generations. Ba Vì milk cakes capture a sense of simplicity and tranquility, adding a gentle sweetness to complete this vibrant culinary portrait of Hanoi.',
+        vi: 'Nằm ở phía Tây Hà Nội, Ba Vì được biết đến với cảnh quan thiên nhiên đa dạng, những vùng đồi xanh và hoạt động chăn nuôi bò sữa. Nhờ điều kiện tự nhiên cùng sự phát triển của ngành sản xuất sữa, khu vực này đã hình thành nhiều sản phẩm từ sữa phục vụ người dân và du khách.\n\nBánh sữa Ba Vì là một trong những thức quà gắn với hình ảnh sản vật địa phương. Với hương vị ngọt béo đặc trưng của sữa, sản phẩm mang đến trải nghiệm khác biệt so với những thức quà truyền thống được làm từ gạo nếp hay trái cây. Bánh sữa cũng thể hiện sự phát triển của nghề chế biến thực phẩm địa phương, khi nguồn nguyên liệu quen thuộc được chuyển hóa thành những sản phẩm tiện lợi để thưởng thức và làm quà.\n\nQua thời gian, các sản phẩm từ sữa đã góp phần tạo nên dấu ấn riêng cho Ba Vì trong hành trình khám phá đặc sản vùng miền của du khách khi đến Hà Nội và các khu vực lân cận.',
+        en: 'Located west of Hanoi, Ba Vi is known for its diverse natural landscapes, green hills, and dairy farming. Thanks to its natural conditions and the development of the dairy industry, the area has produced a variety of dairy products for local residents and visitors.\n\nBa Vi milk cakes are one of the local delicacies closely associated with the region’s agricultural produce. With their distinctive sweet and creamy milk flavor, they offer a different experience from traditional delicacies made from sticky rice or fruit. These milk cakes also reflect the development of local food processing, transforming familiar ingredients into convenient products that can be enjoyed or given as gifts.\n\nOver time, dairy products have helped establish Ba Vi’s distinctive identity in the regional food discovery experiences of visitors exploring Hanoi and its surrounding areas.',
+      },
+      culturalSignificance: {
+        vi: 'Bánh sữa Ba Vì đại diện cho mối liên hệ giữa con người, thiên nhiên và hoạt động sản xuất địa phương. Từ nguồn nguyên liệu sữa, người dân phát triển các sản phẩm phục vụ đời sống và du lịch, góp phần tạo nên giá trị kinh tế cho vùng đất.\n\nKhác với những món quà mang đậm dấu ấn phố cổ, bánh sữa đưa câu chuyện của hộp quà mở rộng ra khu vực ngoại thành, nơi cảnh quan tự nhiên và hoạt động sản xuất nông nghiệp góp phần làm nên sự đa dạng của văn hóa ẩm thực Hà Nội.\n\nSản phẩm cũng gợi nhắc rằng bản sắc của một vùng đất không chỉ nằm trong những di tích lịch sử hay các món ăn lâu đời, mà còn được tạo nên từ nghề nghiệp, sản vật và sự sáng tạo của cộng đồng địa phương.',
+        en: 'Ba Vi milk cakes represent the connection between people, nature, and local production. By using milk as a primary ingredient, local producers have developed products for everyday consumption and tourism, contributing to the region’s economic value.\n\nUnlike gifts that strongly reflect the character of the Old Quarter, Ba Vi milk cakes extend the story of the gift box to Hanoi’s suburban areas, where natural landscapes and agricultural production contribute to the diversity of the city’s culinary culture.\n\nThis product also reminds us that the identity of a place is shaped not only by historical landmarks and long-established dishes but also by local occupations, regional produce, and the creativity of the community.',
       },
       image: '/images/bavi-milk-cakes.webp',
       images: ['/images/bavi-milk-cakes.webp', '/images/bavi-milk-cakes0.webp'],
@@ -103,16 +115,20 @@ export const docxContent = {
       },
       quantity: '150g',
       tagline: {
-        vi: 'Nghệ Thuật Thưởng Thức Thanh Tao',
-        en: 'The Art of Refined Tea Enjoyment',
+        vi: 'Hương sen thanh tao và nghệ thuật thưởng trà',
+        en: 'The Elegant Fragrance of Lotus and the Art of Tea Appreciation',
       },
       fullTitle: {
-        vi: 'Trà Sen Tây Hồ (150g) – Nghệ Thuật Thưởng Thức Thanh Tao',
-        en: 'West Lake Lotus Tea (150g) – The Art of Refined Tea Enjoyment',
+        vi: 'TRÀ SEN TÂY HỒ - Hương sen thanh tao và nghệ thuật thưởng trà',
+        en: 'WEST LAKE LOTUS TEA – The Elegant Fragrance of Lotus and the Art of Tea Appreciation',
       },
       description: {
-        vi: 'Sẽ thật thiếu sót nếu thiếu đi chén trà ấm nóng. Những búp trà xanh thượng hạng được ướp tỉ mỉ trong bông sen bách diệp hái lúc sương sớm tinh sương trên mặt hồ Tây. Thưởng trà sen là tận hưởng thú chơi cầu kỳ, tao nhã bậc nhất của người Hà Nội. Một ngụm trà chát nhẹ, hậu vị ngọt sâu bung tỏa hương sen tinh khiết, xua tan mọi bộn bề.',
-        en: 'No Hanoi gift would be complete without a warm cup of tea. Premium green tea buds are carefully scented with lotus flowers, hand-picked at dawn when the morning mist still lingers over West Lake. Enjoying lotus tea is an expression of one of Hanoi’s most elaborate and graceful traditions. With its gentle astringency, lingering sweetness, and delicate lotus fragrance, each sip invites you to slow down and leave the cares of everyday life behind.',
+        vi: 'Tây Hồ là một trong những không gian cảnh quan nổi bật của Hà Nội, gắn với mặt nước rộng lớn, những con đường ven hồ và hình ảnh hoa sen trong ký ức của nhiều người dân Thủ đô. Hoa sen từ lâu đã xuất hiện trong văn hóa Việt Nam như một hình ảnh gợi nhắc đến sự thanh khiết, vẻ đẹp giản dị và tinh thần hướng đến những giá trị tốt đẹp.\n\nTừ sự kết hợp giữa trà và hương sen, nghệ thuật ướp trà sen được phát triển thành một nét tinh tế trong văn hóa thưởng trà. Quá trình tạo nên trà sen truyền thống đòi hỏi sự cẩn thận trong lựa chọn nguyên liệu, xử lý hương và phối hợp giữa trà với hoa sen để tạo nên mùi thơm hài hòa.\n\nTrà sen Tây Hồ thường được nhắc đến như một thức trà mang dấu ấn văn hóa Hà Nội. Không chỉ nằm ở hương vị, giá trị của trà còn thể hiện qua sự kiên nhẫn, tỉ mỉ và kinh nghiệm của người làm trà, những yếu tố góp phần gìn giữ nghệ thuật ẩm thực truyền thống.',
+        en: 'West Lake is one of Hanoi’s most prominent scenic areas, characterized by its expansive waters, lakeside roads, and lotus flowers that hold a special place in the memories of many Hanoians. For generations, the lotus has been an important symbol in Vietnamese culture, representing purity, simple beauty, and the pursuit of positive values.\n\nThe combination of tea and lotus fragrance has given rise to the art of lotus-scented tea, a refined tradition within Vietnamese tea culture. Producing traditional lotus tea requires great care in selecting ingredients, infusing the fragrance, and blending tea with lotus flowers to achieve a harmonious aroma.\n\nWest Lake lotus tea is widely recognized as a tea that embodies Hanoi’s cultural identity. Beyond its flavor, the tea’s value lies in the patience, meticulousness, and expertise of its producers, all of which contribute to preserving traditional culinary craftsmanship.',
+      },
+      culturalSignificance: {
+        vi: 'Trong văn hóa Việt Nam, hoa sen mang nhiều ý nghĩa biểu tượng, thường gợi liên tưởng đến sự thanh cao, tinh khiết và vẻ đẹp vượt lên trên những điều bình dị. Khi kết hợp với trà, hoa sen tạo nên một trải nghiệm thưởng thức nhẹ nhàng, khuyến khích con người chậm lại để cảm nhận hương thơm, vị trà và không gian xung quanh.\n\nThưởng trà cũng là một nét văn hóa thể hiện sự điềm đạm và lòng hiếu khách. Một ấm trà được chuẩn bị cẩn thận, thơm dịu hương sen không chỉ mang đến cảm giác thư thái mà còn thể hiện sự trân trọng dành cho người thưởng thức. Vì vậy, trà sen Tây Hồ không chỉ là một thức uống truyền thống mà còn là biểu tượng của sự tinh tế, thanh lịch và nét đẹp trong văn hóa tiếp đãi của người Hà Nội.',
+        en: 'In Vietnamese culture, the lotus carries many symbolic meanings and is often associated with nobility, purity, and beauty that rises above ordinary circumstances. When combined with tea, the lotus creates a gentle sensory experience, encouraging people to slow down and appreciate the fragrance, the taste of the tea, and the surrounding atmosphere.\n\nTea appreciation is also a cultural practice that reflects composure and hospitality. A carefully prepared pot of tea with the delicate fragrance of lotus flowers not only creates a sense of relaxation but also expresses respect and appreciation for those who enjoy it. Therefore, West Lake lotus tea is more than a traditional beverage; it is also a symbol of refinement, elegance, and the beauty of Hanoi’s hospitality culture.',
       },
       image: '/images/lotus-tea.webp',
       images: ['/images/lotus-tea.webp', '/images/lotus-tea0.webp'],

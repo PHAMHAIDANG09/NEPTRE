@@ -41,9 +41,9 @@ export default function Hero() {
             absolute
             inset-0
             bg-gradient-to-b
-            from-[#315b3a]/10
-            via-[#315b3a]/10
-            to-[#315b3a]/35
+            from-[#173c22]/45
+            via-[#173c22]/35
+            to-[#173c22]/50
           "
         />
 

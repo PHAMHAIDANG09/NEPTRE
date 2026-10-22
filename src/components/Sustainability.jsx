@@ -41,18 +41,6 @@ export default function Sustainability() {
               </p>
             </div>
 
-            {/* Dual language comparison */}
-            <div className="p-4 bg-brand-100/40 rounded-xl border border-dashed border-brand-300 text-xs text-brand-800/80">
-              <span className="font-bold uppercase tracking-wider block mb-1">
-                {lang === 'vi' ? 'Bản tiếng Anh (English Translation):' : 'Bản tiếng Việt (Vietnamese Original):'}
-              </span>
-              <p className="italic leading-relaxed">
-                {lang === 'vi'
-                  ? docxContent.sustainability.description.en
-                  : docxContent.sustainability.description.vi}
-              </p>
-            </div>
-
             <div className="mt-6 space-y-4">
               <div className="flex items-center gap-3">
                 <div className="w-8 h-8 rounded-full bg-brand-200 text-brand-800 flex items-center justify-center font-bold text-sm">

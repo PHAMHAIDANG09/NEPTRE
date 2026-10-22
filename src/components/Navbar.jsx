@@ -93,7 +93,8 @@ export default function Navbar() {
                 ? 'border-brand-300 bg-brand-50 text-brand-800 hover:bg-brand-100'
                 : 'border-white/40 bg-white/15 text-white hover:bg-white/25'
             }`}
-            title="Switch Language / Chuyển đổi ngôn ngữ"
+            title={lang === 'vi' ? 'Chuyển sang tiếng Anh' : 'Switch to Vietnamese'}
+            aria-label={lang === 'vi' ? 'Chuyển sang tiếng Anh' : 'Switch to Vietnamese'}
           >
             <span>{lang === 'vi' ? '🇻🇳 VIE' : '🇬🇧 ENG'}</span>
             <span className="opacity-70 text-[10px]">⇄</span>
@@ -116,6 +117,7 @@ export default function Navbar() {
         <div className="flex lg:hidden items-center gap-3">
           <button
             onClick={toggleLang}
+            aria-label={lang === 'vi' ? 'Chuyển sang tiếng Anh' : 'Switch to Vietnamese'}
             className={`px-2.5 py-1 rounded-full text-xs font-bold border ${
               scrolled || mobileOpen
                 ? 'border-brand-300 text-brand-800 bg-brand-50'
@@ -191,6 +193,7 @@ export default function Navbar() {
               >
                 <button
                   onClick={toggleLang}
+                  aria-label={lang === 'vi' ? 'Chuyển sang tiếng Anh' : 'Switch to Vietnamese'}
                   className="w-full py-2.5 bg-brand-50 border border-brand-200 text-brand-800 font-bold rounded-xl text-sm flex items-center justify-center gap-2"
                 >
                   <span>{lang === 'vi' ? 'Chuyển Ngôn Ngữ:' : 'Language:'}</span>

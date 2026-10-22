@@ -30,24 +30,18 @@ export default function Team() {
               {getText(docxContent.team.description)}
             </p>
 
-            <div className="mt-4 pt-4 border-t border-brand-100 p-3 bg-brand-50/50 rounded-lg text-xs text-brand-700 italic">
-              <span className="font-bold uppercase tracking-wider not-italic block mb-1">
-                {lang === 'vi' ? 'Song ngữ Tiếng Anh' : 'Original Vietnamese Text:'}
-              </span>
-              {lang === 'vi' ? docxContent.team.description.en : docxContent.team.description.vi}
-            </div>
           </div>
         </motion.div>
 
         {/* 5 Members grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="flex flex-wrap justify-center gap-6">
           {docxContent.team.members.map((member, index) => (
             <motion.div
               key={member.name}
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="glass-card p-6 rounded-2xl text-center group hover:bg-white transition-all duration-300 border border-brand-100 hover:shadow-xl"
+              className="glass-card w-full sm:w-[calc((100%-1.5rem)/2)] lg:w-[calc((100%-3rem)/3)] p-6 rounded-2xl text-center group hover:bg-white transition-all duration-300 border border-brand-100 hover:shadow-xl"
             >
               {/* Avatar circle */}
               <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-br from-brand-200 to-brand-400 text-white font-display font-bold text-2xl flex items-center justify-center mb-4 shadow-md group-hover:scale-105 transition-transform duration-300">
