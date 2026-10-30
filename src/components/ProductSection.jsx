@@ -21,7 +21,7 @@ function ProductStory({ product, lang }) {
           <h4 className="font-semibold mb-2">{section.title}</h4>
           <div className="space-y-3 leading-relaxed">
             {section.text.split('\n\n').map(paragraph => (
-              <p key={paragraph}>{paragraph}</p>
+              <p key={paragraph} className="text-justify">{paragraph}</p>
             ))}
           </div>
         </div>

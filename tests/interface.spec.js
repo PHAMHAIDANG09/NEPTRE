@@ -11,12 +11,23 @@ test('spacing, language, images and navigation work across screen sizes', async 
   await expect(page.locator('#brand-story')).not.toContainText('Bộ quà tặng Hà Nội');
   await expect(page.locator('#sustainability')).not.toContainText('Tất cả 4 thức quà');
   await expect(page.locator('#team')).not.toContainText('Nếp Tre được vận hành');
+  for (const [name, role] of [
+    ['Lưu Thị Thùy Dung', 'Founder & CEO'],
+    ['Dương Thị Na', 'Finance & Accounting Manager'],
+    ['Đặng Phương Trang', 'Marketing Manager'],
+    ['Dương Thị Chúc', 'Sales Manager'],
+    ['Nguyễn Diệu Anh', 'Operations Manager'],
+  ]) {
+    await expect(page.locator('#team .glass-card').filter({ hasText: name })).toContainText(role);
+  }
   await expect(page.locator('#hero .section-label')).toHaveCSS('color', 'rgb(255, 255, 255)');
   await expect(page.locator('#contact form input').first()).toHaveCSS('padding-top', '12px');
   await expect(page.locator('#contact form input').first()).toHaveCSS('padding-left', '16px');
   await expect(page.locator('#gift-box h2')).toHaveCSS('margin-bottom', '16px');
   await expect(page.locator('#gift-box')).toContainText('Sustainable Design');
-  await page.getByRole('button', { name: 'Switch to Vietnamese' }).filter({ visible: true }).click();
+  const vietnameseSwitch = page.getByRole('button', { name: 'Switch to Vietnamese' }).filter({ visible: true });
+  await expect(vietnameseSwitch).toContainText('ENG');
+  await vietnameseSwitch.click();
   await expect(page.locator('html')).toHaveAttribute('lang', 'vi');
   await expect(page.locator('#hero h1')).toHaveText('Bộ Quà Hà Nội');
   await expect(page.locator('#product-green-rice-cake')).toContainText('Nguồn gốc và câu chuyện');
@@ -24,13 +35,31 @@ test('spacing, language, images and navigation work across screen sizes', async 
   await expect(page.locator('#brand-story')).not.toContainText('The Hanoi Gift Box is more');
   await expect(page.locator('#sustainability')).not.toContainText('All four exquisite delicacies');
   await expect(page.locator('#team')).not.toContainText('Nếp Tre is led by');
+  for (const [name, role] of [
+    ['Lưu Thị Thùy Dung', 'Nhà sáng lập & Giám đốc điều hành'],
+    ['Dương Thị Na', 'Quản lý tài chính & kế toán'],
+    ['Đặng Phương Trang', 'Quản lý marketing'],
+    ['Dương Thị Chúc', 'Quản lý kinh doanh'],
+    ['Nguyễn Diệu Anh', 'Quản lý vận hành'],
+  ]) {
+    await expect(page.locator('#team .glass-card').filter({ hasText: name })).toContainText(role);
+  }
   await expect(page.locator('#gift-box')).toContainText('Thiết Kế Bền Vững');
-  await page.getByRole('button', { name: 'Chuyển sang tiếng Anh' }).filter({ visible: true }).click();
+  const englishSwitch = page.getByRole('button', { name: 'Chuyển sang tiếng Anh' }).filter({ visible: true });
+  await expect(englishSwitch).toContainText('VIE');
+  await englishSwitch.click();
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.locator('#hero h1')).toHaveText('Hanoi Gift Box');
   if (testInfo.project.name === 'mobile') {
     await page.locator('#nav-burger').click();
     await expect(page.locator('#nav-burger')).toHaveAttribute('aria-expanded', 'true');
+    const menuLanguageSwitch = page.locator('#mobile-navigation button');
+    await expect(menuLanguageSwitch).toContainText('Language:🇬🇧 English');
+    await menuLanguageSwitch.click();
+    await expect(page.locator('#hero h1')).toHaveText('Bộ Quà Hà Nội');
+    await expect(menuLanguageSwitch).toContainText('Chuyển Ngôn Ngữ:🇻🇳 Tiếng Việt');
+    await menuLanguageSwitch.click();
+    await expect(page.locator('#hero h1')).toHaveText('Hanoi Gift Box');
     await page.locator('#mobile-navigation a[href="#contact"]').first().click();
     await expect(page.locator('#nav-burger')).toHaveAttribute('aria-expanded', 'false');
     await expect(page.locator('body')).not.toHaveCSS('overflow', 'hidden');
